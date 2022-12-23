@@ -10,6 +10,9 @@ public class SliderMovement : MonoBehaviour
 
     private float moveSpeed = .1f;
 
+    private bool collidedHitbox = false;
+    //public Collider2D pointer;
+    public Collider2D hitBox;
 
     private void Awake()
     {
@@ -26,6 +29,7 @@ public class SliderMovement : MonoBehaviour
     private void FixedUpdate()
     {
         movement();
+        spacebarHit();
     }
 
     private void movement()
@@ -38,4 +42,30 @@ public class SliderMovement : MonoBehaviour
             else target = rightSide;
         }
     }
+
+    private void spacebarHit()
+    {
+        if ((hitBox.IsTouchingLayers(LayerMask.GetMask("PointerLayer"))) && Input.GetKey("space"))
+        {
+            Debug.Log("they touchin");
+        }
+
+
+        //if(Input.GetKey("space") && collidedHitbox)
+        //{
+        //    Debug.Log("hitbox space clicked");
+        //}
+
+
+    }
+
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "hitBox")
+    //    {
+    //        Debug.Log("collieded");
+    //        collidedHitbox = true;
+    //    }
+    //    else collidedHitbox = false;
+    //}
 }

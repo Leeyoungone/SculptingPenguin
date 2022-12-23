@@ -427,9 +427,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceBlock: {fileID: 0}
+  spriteRenderer: {fileID: 569929334}
 --- !u!4 &815784995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4842635131444775453, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
+  m_PrefabInstance: {fileID: 3775621726046009108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1245083292 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3657151626523488371, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
   m_PrefabInstance: {fileID: 3775621726046009108}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1289960478 stripped
@@ -1232,7 +1238,8 @@ GameObject:
   - component: {fileID: 2085401810}
   - component: {fileID: 2085401813}
   - component: {fileID: 2085401814}
-  m_Layer: 0
+  - component: {fileID: 2085401815}
+  m_Layer: 6
   m_Name: SliderPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,8 +1306,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085401809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6, y: -2.01, z: 0}
-  m_LocalScale: {x: 0.18180001, y: 1.5454956, z: 1}
+  m_LocalPosition: {x: 6.6163, y: -2.01, z: 0}
+  m_LocalScale: {x: 0.2143604, y: 1.5454956, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1321,6 +1328,7 @@ MonoBehaviour:
   leftSide: {fileID: 815784995}
   rightSide: {fileID: 1289960478}
   sliderPointer: {fileID: 2085401809}
+  hitBox: {fileID: 1245083292}
 --- !u!50 &2085401814
 Rigidbody2D:
   serializedVersion: 4
@@ -1342,6 +1350,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!61 &2085401815
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085401809}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &3775621726046009108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1392,6 +1426,10 @@ PrefabInstance:
     - target: {fileID: 361861799144454238, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108607546694012825, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
+      propertyPath: m_TagString
+      value: hitBox
       objectReference: {fileID: 0}
     - target: {fileID: 3775583120343747821, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
       propertyPath: m_LocalPosition.x
