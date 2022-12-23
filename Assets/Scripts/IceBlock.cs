@@ -5,6 +5,7 @@ using UnityEngine;
 public class IceBlock : MonoBehaviour
 {
     public GameObject iceBlock;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
 
     private void Awake()
@@ -26,6 +27,7 @@ public class IceBlock : MonoBehaviour
 
     public void clickedFlip()
     {
-        transform.position = new Vector3((transform.position.x * -1), transform.position.y, transform.position.z);
+        if (spriteRenderer.flipX) spriteRenderer.flipX = false;
+        else spriteRenderer.flipX = true;
     }
 }
