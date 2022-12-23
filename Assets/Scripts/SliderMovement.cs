@@ -8,7 +8,8 @@ public class SliderMovement : MonoBehaviour
     public GameObject sliderPointer;
     private Rigidbody2D rb;
 
-    private float moveSpeed = .01f;
+    private float moveSpeed = .1f;
+
 
     private void Awake()
     {
@@ -22,25 +23,19 @@ public class SliderMovement : MonoBehaviour
         target = leftSide;
     }
 
-    private void movement()
-    {
-        transform.position = Vector3.Lerp(transform.position, target.position, moveSpeed);
-
-        if (Mathf.Abs(transform.position.x - target.position.x) < 1f)
-        {
-            if (target == rightSide) target = leftSide;
-            else target = rightSide;
-        }
-    }
-
     private void FixedUpdate()
     {
         movement();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void movement()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed);
+
+        if(transform.position.x == target.position.x)
+        {
+            if (target == rightSide) target = leftSide;
+            else target = rightSide;
+        }
     }
 }
