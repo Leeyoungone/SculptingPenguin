@@ -6,6 +6,7 @@ TagManager:
   tags:
   - leftSide
   - rightSide
+  - Block
   layers:
   - Default
   - TransparentFX

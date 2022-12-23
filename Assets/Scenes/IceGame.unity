@@ -339,9 +339,10 @@ GameObject:
   m_Component:
   - component: {fileID: 569929335}
   - component: {fileID: 569929334}
+  - component: {fileID: 569929337}
   m_Layer: 0
   m_Name: IceBlock
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -413,6 +414,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569929337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569929333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558a28c4a19b2447284b25f24625686d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceBlock: {fileID: 0}
 --- !u!4 &815784995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4842635131444775453, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
@@ -797,7 +811,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1764451410}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 569929337}
+        m_TargetAssemblyTypeName: IceBlock, Assembly-CSharp
+        m_MethodName: clickedFlip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1764451410
 MonoBehaviour:
   m_ObjectHideFlags: 0
