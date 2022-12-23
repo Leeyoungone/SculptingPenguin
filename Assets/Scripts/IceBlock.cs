@@ -27,7 +27,10 @@ public class IceBlock : MonoBehaviour
 
     public void clickedFlip()
     {
-        if (spriteRenderer.flipX) spriteRenderer.flipX = false;
-        else spriteRenderer.flipX = true;
+        if(!Input.GetKeyDown("space"))
+        {
+            if (spriteRenderer.flipX) spriteRenderer.flipX = false;
+            else spriteRenderer.flipX = true;
+        }
     }
 }

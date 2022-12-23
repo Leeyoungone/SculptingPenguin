@@ -29,7 +29,11 @@ public class SliderMovement : MonoBehaviour
     private void FixedUpdate()
     {
         movement();
-        spacebarHit();
+    }
+
+    private void Update()
+    {
+            spacebarHit();
     }
 
     private void movement()
@@ -45,15 +49,9 @@ public class SliderMovement : MonoBehaviour
 
     private void spacebarHit()
     {
-        if ((pointer.IsTouching(hitBox) && Input.GetKey("space")))
-        {
-            Debug.Log("they touchin");
+        if (Input.GetKeyDown("space")) {
+            if (pointer.IsTouching(hitBox)) Debug.Log("they touchin");
+            else Debug.Log("non hit area");
         }
-        if (Input.GetKey("space"))
-        {
-            Debug.Log("not touchin");
-        }
-
-
     }
 }
