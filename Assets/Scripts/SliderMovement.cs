@@ -10,13 +10,18 @@ public class SliderMovement : MonoBehaviour
 
     private float moveSpeed = .1f;
 
-    private bool collidedHitbox = false;
+    public bool collidedHitbox = false;
     public Collider2D pointer;
     public Collider2D hitBox;
+
+    //accessing PenguinScript
+    PenguinScript penguinScript;
+    [SerializeField] GameObject penguin;
 
     private void Awake()
     {
         sliderPointer = GameObject.Find("Slider");
+        penguinScript = penguin.GetComponent<PenguinScript>();
     }
 
     // Start is called before the first frame update
@@ -33,7 +38,8 @@ public class SliderMovement : MonoBehaviour
 
     private void Update()
     {
-            spacebarHit();
+        spacebarHit();
+        if (!pointer.IsTouching(hitBox)) collidedHitbox = false;
     }
 
     private void movement()
@@ -50,7 +56,12 @@ public class SliderMovement : MonoBehaviour
     private void spacebarHit()
     {
         if (Input.GetKeyDown("space")) {
-            if (pointer.IsTouching(hitBox)) Debug.Log("they touchin");
+            if (pointer.IsTouching(hitBox))
+            {
+                collidedHitbox = true;
+                penguinScript.GoodAnimation();
+                Debug.Log("they touchin");
+            }
             else Debug.Log("non hit area");
         }
     }
