@@ -10,6 +10,10 @@ public class PenguinScript : MonoBehaviour
     IceRelated iceRelatedS;
     [SerializeField] GameObject iceRel;
 
+    //accessing sliderMovement script
+    SliderMovement sliderMovement;
+    [SerializeField] GameObject sliderS;
+
     //positions of the blocks
     public Transform block1, block2, block3, block4;
 
@@ -22,11 +26,13 @@ public class PenguinScript : MonoBehaviour
     void Start()
     {
         iceRelatedS = iceRel.GetComponent<IceRelated>();
+        sliderMovement = sliderS.GetComponent<SliderMovement>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        //if (sliderMovement.collidedHitbox) boxModification();
         if (iceRelatedS.firstFlip)
         {
             Debug.Log("firstFlip");

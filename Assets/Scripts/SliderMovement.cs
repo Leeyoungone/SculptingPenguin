@@ -15,7 +15,7 @@ public class SliderMovement : MonoBehaviour
     public Collider2D hitBox;
 
     //debugging purposes
-    public int counter = 0;
+    //public int counter = 0;
 
     //accessing PenguinScript
     PenguinScript penguinScript;
@@ -40,7 +40,7 @@ public class SliderMovement : MonoBehaviour
         movement();
     }
 
-    private void Update()
+    public void Update()
     {
         spacebarHit();
         if (!pointer.IsTouching(hitBox)) collidedHitbox = false;
@@ -63,15 +63,10 @@ public class SliderMovement : MonoBehaviour
             if (pointer.IsTouching(hitBox))
             {
                 collidedHitbox = true;
-                counter += 1;
-                Debug.Log("hit box: " + counter);
+                //counter += 1;
+                //Debug.Log("hit box: " + counter);
                 penguinScript.boxModification();
-
                 penguinScript.GoodAnimation();
-
-                //call function to check which block is colliding
-
-                Debug.Log("they touchin");
             }
             else Debug.Log("non hit area");
         }
