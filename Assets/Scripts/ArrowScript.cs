@@ -6,9 +6,10 @@ public class ArrowScript : MonoBehaviour
 {
     public GameObject arrowObject;
 
-    //public Transform block2l, block4l;
     public Transform penguinLocation;
 
+    public int box1, box2, box3, box4;
+    public bool box1hit, box2hit, box3hit, box4hit;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,6 @@ public class ArrowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("block2l y value " + block2l.position.y);
     }
 
     public void clickedButtonDown()

@@ -13,6 +13,9 @@ public class PenguinScript : MonoBehaviour
     //positions of the blocks
     public Transform block1, block2, block3, block4;
 
+    //for checking the hit box + which one arrow is pointing at
+    public Collider2D arrow;
+    public Collider2D cBox1, cBox2, cBox3, cBox4;
 
 
     // Start is called before the first frame update
@@ -67,7 +70,7 @@ public class PenguinScript : MonoBehaviour
             block3.transform.position = block4.transform.position;
             block4.transform.position = temporaryPos3;
 
-            Debug.Log("first casE");
+            Debug.Log("first case");
         }
         if (flagB)
         {
@@ -83,5 +86,37 @@ public class PenguinScript : MonoBehaviour
 
             Debug.Log("second case");
         }
+    }
+
+    public void boxModification()
+    {
+
+        Debug.Log("box modi called, beginning");
+        //box 1
+        if (arrow.IsTouching(cBox1))
+        {
+            Debug.Log("red box hit");
+        }
+        //box 2
+        if (arrow.IsTouching(cBox2))
+        {
+            Debug.Log("blue box hit");
+        }
+        //box 3
+        if (arrow.IsTouching(cBox3))
+        {
+            Debug.Log("green box hit");
+        }
+        //box 4
+        if (arrow.IsTouching(cBox4))
+        {
+            Debug.Log("purple box hit");
+        }
+        //catch case
+        else
+        {
+            Debug.Log("not touching B");
+        }
+        Debug.Log("box modi end, end");
     }
 }
