@@ -12,8 +12,6 @@ public class ArrowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //block2l = GameObject.Find("Block2").transform.position.y;
-        //block4l = GameObject.Find("Block4");
         arrowObject = GameObject.Find("Arrow");
     }
 

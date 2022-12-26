@@ -169,6 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 55977676}
+  flipA: 0
+  flipB: 0
 --- !u!212 &55977676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -715,7 +717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240581124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 1.99, z: 0}
+  m_LocalPosition: {x: -0.46, y: 2.21, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -735,8 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowObject: {fileID: 1240581124}
-  block2location: {fileID: 55977673}
-  block4location: {fileID: 2140936889}
+  block2l: {fileID: 55977674}
+  block4l: {fileID: 2140936890}
 --- !u!61 &1245083292 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3657151626523488371, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
@@ -1353,6 +1355,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happyCat: {fileID: 601634567}
+  iceRel: {fileID: 2010679193}
+  block1: {fileID: 2010679194}
+  block2: {fileID: 55977674}
+  block3: {fileID: 1824617736}
+  block4: {fileID: 2140936890}
 --- !u!1 &1824617735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1824617738}
+  flipA: 0
+  flipB: 0
 --- !u!212 &1824617738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1502,6 +1511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2010679196}
+  flipA: 0
+  flipB: 0
 --- !u!212 &2010679196
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2059,6 +2070,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2140936892}
+  flipA: 0
+  flipB: 0
 --- !u!212 &2140936892
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -22,27 +22,27 @@ public class PenguinScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (!(iceRelatedS.flipA && iceRelatedS.flipB))
+        if (iceRelatedS.firstFlip)
         {
-            swappingIcePosition(iceRelatedS.flipA, iceRelatedS.flipB);
+            Debug.Log("firstFlip");
+            swappingIcePosition(iceRelatedS.firstFlip, iceRelatedS.flipA, iceRelatedS.flipB);
+            iceRelatedS.firstFlip = false;
         }
         if (iceRelatedS.flipA)
         {
+            Debug.Log("flipA");
+            swappingIcePosition(iceRelatedS.firstFlip, iceRelatedS.flipA, iceRelatedS.flipB);
             iceRelatedS.flipA = false;
             iceRelatedS.flipB = true;
-            swappingIcePosition(iceRelatedS.flipA, iceRelatedS.flipB);
         }
         if (iceRelatedS.flipB)
         {
+            Debug.Log("flipB");
+            swappingIcePosition(iceRelatedS.firstFlip, iceRelatedS.flipA, iceRelatedS.flipB);
             iceRelatedS.flipA = true;
             iceRelatedS.flipB = false;
-            swappingIcePosition(iceRelatedS.flipA, iceRelatedS.flipB);
-        }
-        else
-        {
-            Debug.Log("missed case");
         }
     }
 
@@ -53,9 +53,9 @@ public class PenguinScript : MonoBehaviour
         Instantiate(happyCat, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
     }
 
-    public void swappingIcePosition(bool flagA, bool flagB)
+    public void swappingIcePosition(bool firstFlip, bool flagA, bool flagB)
     {
-        if (flagA)
+        if (flagA || firstFlip)
         {
             //swap 1 and 2
             Vector3 temporaryPos1 = block1.transform.position;
@@ -66,6 +66,8 @@ public class PenguinScript : MonoBehaviour
             Vector3 temporaryPos3 = block3.transform.position;
             block3.transform.position = block4.transform.position;
             block4.transform.position = temporaryPos3;
+
+            Debug.Log("first casE");
         }
         if (flagB)
         {
@@ -78,6 +80,8 @@ public class PenguinScript : MonoBehaviour
             Vector3 temporaryPos4 = block4.transform.position;
             block4.transform.position = block3.transform.position;
             block3.transform.position = temporaryPos4;
+
+            Debug.Log("second case");
         }
     }
 }
