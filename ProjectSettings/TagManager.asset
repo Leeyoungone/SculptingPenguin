@@ -8,6 +8,11 @@ TagManager:
   - rightSide
   - Block
   - hitBox
+  - Block1
+  - Block2
+  - Block3
+  - Block4
+  - Arrow
   layers:
   - Default
   - TransparentFX
