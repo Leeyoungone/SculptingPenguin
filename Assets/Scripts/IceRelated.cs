@@ -13,7 +13,9 @@ public class IceRelated : MonoBehaviour
     public bool flipB = false;
 
     //for changing the spirites based on the hits
-    public Sprite afterHits;
+    //public Sprite afterHits
+    public Sprite ahB1, ahB2, ahB3, ahB4;
+
 
     //accessing the penguine script to get the hit data
     PenguinScript penguineScript;
@@ -59,9 +61,9 @@ public class IceRelated : MonoBehaviour
 
     public void HitChecker()
     {
-        if (penguineScript.hitC1 >= 2) sr1.sprite = afterHits;
-        if (penguineScript.hitC2 >= 2) sr2.sprite = afterHits;
-        if (penguineScript.hitC3 >= 2) sr3.sprite = afterHits;
-        if (penguineScript.hitC4 >= 2) sr4.sprite = afterHits;
+        if (penguineScript.hitC1 >= 2) sr1.sprite = ahB1;
+        if (penguineScript.hitC2 >= 2) sr2.sprite = ahB2;
+        if (penguineScript.hitC3 >= 2) sr3.sprite = ahB3;
+        if (penguineScript.hitC4 >= 2) sr4.sprite = ahB4;
     }
 }

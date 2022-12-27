@@ -177,7 +177,10 @@ MonoBehaviour:
   firstFlip: 0
   flipA: 0
   flipB: 0
-  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  ahB1: {fileID: -1059565372, guid: 7800358ca2d054648b52d83f16df4ba2, type: 3}
+  ahB2: {fileID: 279517395, guid: 9ddbb102ddf1f4e7089df96eea48669f, type: 3}
+  ahB3: {fileID: -1757910150, guid: eb09dc038e6a641859106c83096fcce7, type: 3}
+  ahB4: {fileID: -2044732904, guid: 7136c41160e054a7eab66d33a65fd8a2, type: 3}
   penS: {fileID: 1785447363}
 --- !u!212 &55977676
 SpriteRenderer:
@@ -1514,7 +1517,10 @@ MonoBehaviour:
   firstFlip: 0
   flipA: 0
   flipB: 0
-  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  ahB1: {fileID: -1059565372, guid: 7800358ca2d054648b52d83f16df4ba2, type: 3}
+  ahB2: {fileID: 279517395, guid: 9ddbb102ddf1f4e7089df96eea48669f, type: 3}
+  ahB3: {fileID: -1757910150, guid: eb09dc038e6a641859106c83096fcce7, type: 3}
+  ahB4: {fileID: -2044732904, guid: 7136c41160e054a7eab66d33a65fd8a2, type: 3}
   penS: {fileID: 1785447363}
 --- !u!212 &1824617738
 SpriteRenderer:
@@ -1653,7 +1659,10 @@ MonoBehaviour:
   firstFlip: 0
   flipA: 0
   flipB: 0
-  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  ahB1: {fileID: -1059565372, guid: 7800358ca2d054648b52d83f16df4ba2, type: 3}
+  ahB2: {fileID: 279517395, guid: 9ddbb102ddf1f4e7089df96eea48669f, type: 3}
+  ahB3: {fileID: -1757910150, guid: eb09dc038e6a641859106c83096fcce7, type: 3}
+  ahB4: {fileID: -2044732904, guid: 7136c41160e054a7eab66d33a65fd8a2, type: 3}
   penS: {fileID: 1785447363}
 --- !u!212 &2010679196
 SpriteRenderer:
@@ -2246,7 +2255,10 @@ MonoBehaviour:
   firstFlip: 0
   flipA: 0
   flipB: 0
-  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  ahB1: {fileID: -1059565372, guid: 7800358ca2d054648b52d83f16df4ba2, type: 3}
+  ahB2: {fileID: 279517395, guid: 9ddbb102ddf1f4e7089df96eea48669f, type: 3}
+  ahB3: {fileID: -1757910150, guid: eb09dc038e6a641859106c83096fcce7, type: 3}
+  ahB4: {fileID: -2044732904, guid: 7136c41160e054a7eab66d33a65fd8a2, type: 3}
   penS: {fileID: 1785447363}
 --- !u!212 &2140936892
 SpriteRenderer:

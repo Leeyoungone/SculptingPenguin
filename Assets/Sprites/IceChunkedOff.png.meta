@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93b60a3c7475342debffe30643c77ad4
+guid: 9ddbb102ddf1f4e7089df96eea48669f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2000
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iceChunk_0
+      name: IceChunkedOff_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d769c994bc7d4fb3a2457c05e302958
-      internalID: 1415219327
+      spriteID: a4e4245b72fc54b72a15292e4f61125b
+      internalID: 279517395
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      iceChunk_0: 1415219327
+      IceChunkedOff_0: 279517395
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
