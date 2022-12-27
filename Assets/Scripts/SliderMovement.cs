@@ -14,8 +14,6 @@ public class SliderMovement : MonoBehaviour
     public Collider2D pointer;
     public Collider2D hitBox;
 
-    //debugging purposes
-    //public int counter = 0;
 
     //accessing PenguinScript
     PenguinScript penguinScript;
@@ -25,7 +23,6 @@ public class SliderMovement : MonoBehaviour
     {
         sliderPointer = GameObject.Find("Slider");
         penguinScript = penguin.GetComponent<PenguinScript>();
-        //arrowScript = arrow.GetComponent<ArrowScript>();
     }
 
     // Start is called before the first frame update
@@ -63,8 +60,6 @@ public class SliderMovement : MonoBehaviour
             if (pointer.IsTouching(hitBox))
             {
                 collidedHitbox = true;
-                //counter += 1;
-                //Debug.Log("hit box: " + counter);
                 penguinScript.boxModification();
                 penguinScript.GoodAnimation();
             }

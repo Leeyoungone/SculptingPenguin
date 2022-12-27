@@ -20,9 +20,9 @@ public class PenguinScript : MonoBehaviour
     //for checking the hit box + which one arrow is pointing at
     public Collider2D arrow;
     public Collider2D cBox1, cBox2, cBox3, cBox4;
+    public int hitC1, hitC2, hitC3, hitC4; //int counter for the hits
 
 
-    // Start is called before the first frame update
     void Start()
     {
         iceRelatedS = iceRel.GetComponent<IceRelated>();
@@ -97,32 +97,39 @@ public class PenguinScript : MonoBehaviour
     public void boxModification()
     {
 
-        Debug.Log("box modi called, beginning");
         //box 1
         if (arrow.IsTouching(cBox1))
         {
+            hitC1 += 1;
             Debug.Log("red box hit");
         }
+
         //box 2
         if (arrow.IsTouching(cBox2))
         {
+            hitC2 += 1;
             Debug.Log("blue box hit");
         }
+
         //box 3
         if (arrow.IsTouching(cBox3))
         {
+            hitC3 += 1;
             Debug.Log("green box hit");
         }
+
         //box 4
         if (arrow.IsTouching(cBox4))
         {
+            hitC4 += 1;
             Debug.Log("purple box hit");
         }
+
         //catch case
         else
         {
             Debug.Log("not touching B");
         }
-        Debug.Log("box modi end, end");
+        iceRelatedS.HitChecker();
     }
 }

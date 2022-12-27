@@ -5,16 +5,24 @@ using UnityEngine;
 public class IceRelated : MonoBehaviour
 {
     private GameObject cube1, cube2, cube3, cube4;
-    //public Transform block1, block2, block3, block4;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer sr1, sr2, sr3, sr4;
 
     public bool firstFlip = false;
     public bool flipA = false;
     public bool flipB = false;
 
-    // Start is called before the first frame update
+    //for changing the spirites based on the hits
+    public Sprite afterHits;
+
+    //accessing the penguine script to get the hit data
+    PenguinScript penguineScript;
+    [SerializeField] GameObject penS;
+
+
     void Start()
     {
+        penguineScript = penS.GetComponent<PenguinScript>();
         cube1 = GameObject.Find("Block1");
         cube2 = GameObject.Find("Block2");
         cube3 = GameObject.Find("Block3");
@@ -47,5 +55,13 @@ public class IceRelated : MonoBehaviour
                 //swappingIcePosition(flipA, flipB);
             }
         }
+    }
+
+    public void HitChecker()
+    {
+        if (penguineScript.hitC1 >= 2) sr1.sprite = afterHits;
+        if (penguineScript.hitC2 >= 2) sr2.sprite = afterHits;
+        if (penguineScript.hitC3 >= 2) sr3.sprite = afterHits;
+        if (penguineScript.hitC4 >= 2) sr4.sprite = afterHits;
     }
 }

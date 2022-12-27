@@ -170,9 +170,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 55977676}
+  sr1: {fileID: 2010679196}
+  sr2: {fileID: 55977676}
+  sr3: {fileID: 1824617738}
+  sr4: {fileID: 2140936892}
   firstFlip: 0
   flipA: 0
   flipB: 0
+  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  penS: {fileID: 1785447363}
 --- !u!212 &55977676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -679,6 +685,7 @@ GameObject:
   - component: {fileID: 1240581125}
   - component: {fileID: 1240581127}
   - component: {fileID: 1240581128}
+  - component: {fileID: 1240581129}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Arrow
@@ -801,6 +808,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17.820755, y: 1.5630028}
   m_EdgeRadius: 0
+--- !u!50 &1240581129
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240581124}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &1245083292 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3657151626523488371, guid: 2d7b07c67321240e8b65fd5963ef5609, type: 3}
@@ -1418,6 +1446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   happyCat: {fileID: 601634567}
   iceRel: {fileID: 2010679193}
+  sliderS: {fileID: 2085401809}
   block1: {fileID: 2010679194}
   block2: {fileID: 55977674}
   block3: {fileID: 1824617736}
@@ -1427,6 +1456,10 @@ MonoBehaviour:
   cBox2: {fileID: 55977677}
   cBox3: {fileID: 1824617739}
   cBox4: {fileID: 2140936893}
+  hitC1: 0
+  hitC2: 0
+  hitC3: 0
+  hitC4: 0
 --- !u!1 &1824617735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,9 +1507,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1824617738}
+  sr1: {fileID: 2010679196}
+  sr2: {fileID: 55977676}
+  sr3: {fileID: 1824617738}
+  sr4: {fileID: 2140936892}
   firstFlip: 0
   flipA: 0
   flipB: 0
+  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  penS: {fileID: 1785447363}
 --- !u!212 &1824617738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1607,9 +1646,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2010679196}
+  sr1: {fileID: 2010679196}
+  sr2: {fileID: 55977676}
+  sr3: {fileID: 1824617738}
+  sr4: {fileID: 2140936892}
   firstFlip: 0
   flipA: 0
   flipB: 0
+  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  penS: {fileID: 1785447363}
 --- !u!212 &2010679196
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2099,7 +2144,6 @@ MonoBehaviour:
   collidedHitbox: 0
   pointer: {fileID: 2085401815}
   hitBox: {fileID: 1245083292}
-  counter: 0
   penguin: {fileID: 1785447363}
 --- !u!50 &2085401814
 Rigidbody2D:
@@ -2195,9 +2239,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2140936892}
+  sr1: {fileID: 2010679196}
+  sr2: {fileID: 55977676}
+  sr3: {fileID: 1824617738}
+  sr4: {fileID: 2140936892}
   firstFlip: 0
   flipA: 0
   flipB: 0
+  afterHits: {fileID: 1415219327, guid: 93b60a3c7475342debffe30643c77ad4, type: 3}
+  penS: {fileID: 1785447363}
 --- !u!212 &2140936892
 SpriteRenderer:
   m_ObjectHideFlags: 0
