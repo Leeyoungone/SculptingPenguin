@@ -15,12 +15,12 @@ public class PenguinScript : MonoBehaviour
     [SerializeField] GameObject sliderS;
 
     //positions of the blocks
-    public Transform block1, block2, block3, block4;
+    [HideInInspector] public Transform block1, block2, block3, block4;
 
     //for checking the hit box + which one arrow is pointing at
     public Collider2D arrow;
-    public Collider2D cBox1, cBox2, cBox3, cBox4;
-    public int hitC1, hitC2, hitC3, hitC4; //int counter for the hits
+    [HideInInspector] public Collider2D cBox1, cBox2, cBox3, cBox4;
+    [HideInInspector] public int hitC1, hitC2, hitC3, hitC4; //int counter for the hits
 
 
     void Start()
