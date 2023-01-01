@@ -10,7 +10,7 @@ public class BottomBar : MonoBehaviour
     public TextMeshProUGUI personNameText;
 
     private int sentenceIndex = -1;
-    public StoryScene currentScene;
+    private StoryScene currentScene;
     private State state = State.COMPLETED;
 
     private enum State
@@ -18,13 +18,30 @@ public class BottomBar : MonoBehaviour
         PLAYING, COMPLETED
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void PlayScene(StoryScene scene)
+    {
+        currentScene = scene;
+        sentenceIndex = -1;
+        PlayNextSentence();
+
+    }
+
+    public void PlayNextSentence()
     {
         StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
         personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
         Debug.Log("color is : " + personNameText.color);
+    }
+
+    public bool IsCompleted()
+    {
+        return state == State.COMPLETED;
+    }
+
+    public bool isLastSentence()
+    {
+        return sentenceIndex + 1 == currentScene.sentences.Count;
     }
 
     private IEnumerator TypeText(string text)
