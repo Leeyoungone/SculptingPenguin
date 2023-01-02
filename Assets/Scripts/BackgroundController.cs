@@ -14,7 +14,7 @@ public class BackgroundController : MonoBehaviour
     {
         if(!isSwitched)
         {
-            background1.sprite = sprite;
+            background2.sprite = sprite;
             animator.SetTrigger("SwitchFirst");
         } else
         {
@@ -32,7 +32,7 @@ public class BackgroundController : MonoBehaviour
         }
         else
         {
-            background1.sprite = sprite;
+            background2.sprite = sprite;
         }
     }
 }
